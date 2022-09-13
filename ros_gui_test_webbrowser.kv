@@ -1,0 +1,17 @@
+FloatLayout:
+
+    MDLabel:
+        id: record_your_conversations_label6a
+        size_hint_y: None
+        height: self.texture_size[1] + 2*self.padding[1]
+        padding: dp(15), dp(10)
+        markup: True
+        text:
+            """
+            For many, this is the first introduction to master audio files making for a steep learning curve.\n
+            I've searched for the tips [ref=Alitu][b][u]google[/u][/b][/ref], you are welcome!
+            """
+        on_ref_press:
+            import webbrowser
+            webbrowser.open('https://google.com')
+

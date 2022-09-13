@@ -1,0 +1,14 @@
+FloatLayout:
+
+    MDLabel:
+        text: "Hello World"
+        halign: "center"
+        size_hint: 1, 1 #(x,y 퍼센트 1이 최대치?)
+        pos_hint: {"center_x": .5, "center_y": .5}  #이것도 퍼센트로 표시 (글자 위치)
+
+    MDRaisedButton:
+        text: "Press Me!"
+        md_bg_color: 0, 1, 1, 1  ## 색깔 표시 (RGB)
+        size_hint: 0.2, 0.1 #(x,y 퍼센트 1이 최대치? - 버튼이 전체화면으로 된다 )
+        pos_hint: {"center_x": .5, "center_y": .3}  #이것도 퍼센트로 표시 (버튼 위치)
+        

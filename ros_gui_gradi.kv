@@ -1,0 +1,44 @@
+FloatLayout:
+    ## 전체에 그레디언트를 넣으려면 상위에도 넣어주면 된다 
+    canvas:
+        color:
+            rgba: (1,1,1,0.5)  ##이렇게 했을 때에는 그레디언트가 보임 
+
+        Rectangle:  ## 모서리 둥근 사각형  ## or Rectangle
+            source: '/home/user/docker_ws/src/py_kivy_tutorial/img/gradient.png'  ## png(그레디언트)파일을 넣어준다
+            size: self.size
+            pose: self.pos
+
+    MDLabel:
+        canvas:
+            color:
+                # rgba: (0, 0, 0, 2)  ##이렇게 했을 때에는 그레디언트가 안 보임 
+                rgba: (1,1,1,0.5)  ##이렇게 했을 때에는 그레디언트가 보임 
+
+            RoundedRectangle:  ## 모서리 둥근 사각형  ## or Rectangle
+                source: '/home/user/docker_ws/src/py_kivy_tutorial/img/gradient.png'  ## png(그레디언트)파일을 넣어준다
+                size: self.size
+                pose: self.pos
+                radius: [25,]
+
+        text: "Label1"
+        halign: "center"
+        size_hint: 0.3, 0.1 #(x,y 퍼센트 1이 최대치?)
+        pos_hint: {"center_x": 0.75, "center_y": 0.5}  #이것도 퍼센트로 표시 (글자 위치)
+
+    MDRaisedButton:
+    ##여기에 위의 MDLabel canvas를 카피
+        canvas:
+            color:
+                # rgba: (0, 0, 0, 2)  ##이렇게 했을 때에는 그레디언트가 안 보임 
+                rgba: (1,1,1,0.5)  ##이렇게 했을 때에는 그레디언트가 보임 
+
+            Rectangle:  ## 모서리 둥근 사각형  ## or Rectangle
+                source: '/home/user/docker_ws/src/py_kivy_tutorial/img/gradient.png'  ## png(그레디언트)파일을 넣어준다
+                size: self.size
+                pose: self.pos
+                
+        text: "Button 1"
+        size_hint: 0.3, 0.3 #(x,y 퍼센트 1이 최대치? - 버튼이 전체화면으로 된다 )
+        pos_hint: {"center_x": 0.25, "center_y": 0.5}  #이것도 퍼센트로 표시 (버튼 위치)
+        

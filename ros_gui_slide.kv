@@ -1,0 +1,20 @@
+FloatLayout:
+
+    MDSlider
+        id: my_slider
+        min: 0
+        max: 100
+        value: 40
+        hint: True  ## value를 보여준다. 
+        # on_touch_up: app.sliderFunction(self.value)  #현재의 value를 파이썬 app의 sliderFunction에 넘겨준다
+        on_touch_move(app.sliderFunction(self.value)  #id를 지정하면 self 대신에 id로 접근이 가능 예: my_slider.value
+        # on_touch_move 함수는 kivymd에는 나와있지 않지만 kivy (오리지널)에 가면 레퍼런스를 찾아볼 수가 있다 
+        # 슬라이더를 움직일 때마다 작동한다 
+
+    
+    MDLabel: # anther child of main root (FloatLayout)
+        # text: "speed: %s" % int(self.value)
+        text: "speed: %s" % int(my_slider.value)  #위의 MDSlider에 id를 만들면 이런식으로 접근이 가능
+        halign: "center"
+        size_hint: 0.25, 0.25
+        pose_hint: {"center_x": 0.5, "center_y": 0.7}   

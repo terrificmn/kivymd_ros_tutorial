@@ -1,0 +1,17 @@
+FloatLayout:
+
+    MDLabel:
+        id: my_label  ## 모든 위젯은 ID를 가질 수 있다~ MDlabel, MDRaisedButton 등으로 정의한 것들을 위젯이라 칭함
+        ### 이 ID를 파이썬에서 access할 수 있다 (예: self.screen.ids.my_label.txt )
+        text: "Hello World"
+        halign: "center"
+        size_hint: 1, 1 #(x,y 퍼센트 1이 최대치?)
+        pos_hint: {"center_x": .5, "center_y": .5}  #이것도 퍼센트로 표시 (글자 위치)
+
+    MDRaisedButton:
+        id: my_button
+        text: "Press Me!"
+        md_bg_color: 0, 1, 1, 1  ## 색깔 표시 (RGB)
+        size_hint: 0.2, 0.1 #(x,y 퍼센트 1이 최대치? - 버튼이 전체화면으로 된다 )
+        pos_hint: {"center_x": .5, "center_y": .3}  #이것도 퍼센트로 표시 (버튼 위치)
+        on_press: app.my_function(*args)  ## function 으로 연결됨

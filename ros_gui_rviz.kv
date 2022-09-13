@@ -1,0 +1,28 @@
+# https://www.youtube.com/watch?v=Rwgyto30Rp4  참고하기
+
+FloatLayout:
+
+    CEFBrower:
+        id: cef_browser
+        url: "http://localhost:8080...."
+        size_hint: 0.95, 0.85
+        pos_hint: {'center_x': 0.5, 'center_y': 0.44}
+
+
+https://github.com/lucasw/rviz_camera_stream.git
+catkit_ws/src 에 클론 후 빌드해준다
+이후 launch 디렉토리의 demo.launch 파일을 참고  
+base프레임은 map  으로 하고 자식 프레임은 rviz_cam 식으로 바꿔준다. frame_id도 바꿔줘야한다 
+
+sudo apt install ros-noetic-web-video-server 를 설치를 해준다   
+그리고 web-video-server 패키지를 런치파일에 추가해준다  
+
+
+런치파일을 실행한다 
+Add 버튼을 눌러서 rviz_camera_stream을 추가해준다 
+image Topic은 임의로 정해준다 (퍼블리싱하는 topic이 된다)
+
+static_transform_publisher 노드로 실행해서 tf를 발행할 수 있게 해줘야한다 
+
+
+
