@@ -1,0 +1,40 @@
+FloatLayout:
+
+    MDLabel:
+        id: center_label  ## 모든 위젯은 ID를 가질 수 있다~ MDlabel, MDRaisedButton 등으로 정의한 것들을 위젯이라 칭함
+        ### 이 ID를 파이썬에서 access할 수 있다 (예: self.screen.ids.my_label.txt )
+        text: ""
+        halign: "center"
+        size_hint: 1, 1 #(x,y 퍼센트 1이 최대치?)
+        pos_hint: {"center_x": .5, "center_y": .5}  #이것도 퍼센트로 표시 (글자 위치)
+    
+    MDLabel:
+        id: waypoint_title  
+        text: "Waypoints Navigation"
+        halign: "center"
+        size_hint: 1, 1 
+        pos_hint: {"center_x": 0.15, "center_y": 0.98} 
+
+    MDRaisedButton:
+        id: save_button
+        text: "Save Waypoint"
+        md_bg_color: 0, 0, 1, 1  #(RGB)
+        size_hint: 0.2, 0.1 
+        pos_hint: {"center_x": .2, "center_y": .3}  
+        on_press: app.saveWp(*args)  ## function 
+
+    MDRaisedButton:
+        id: start_button
+        text: "Load waypoints"
+        md_bg_color: 0, 1, 0, 1  #(RGB)
+        size_hint: 0.2, 0.1 
+        pos_hint: {"center_x": .5, "center_y": .3}  
+        on_press: app.loadWp(*args)  ## function 
+
+    MDRaisedButton:
+        id: reset_button
+        text: "Reset waypoint"
+        md_bg_color: 1, 0, 0, 1  #(RGB)
+        size_hint: 0.2, 0.1 
+        pos_hint: {"center_x": .8, "center_y": .3}  
+        on_press: app.resetWp(*args)  ## function 

@@ -27,5 +27,5 @@ class TutorialApp(MDApp):
 
 if __name__ == '__main__':
     rospy.init_node('simple_gui', anonymous=True)
-    pub = rospy.Publish('/button', Bool, queue_size=1)
+    pub = rospy.Publisher('/button', Bool, queue_size=1)
     TutorialApp().run()

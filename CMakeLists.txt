@@ -50,6 +50,7 @@ catkin_install_python(PROGRAMS
   py/kivy_gui_basic.py
   py/kivy_gui_pub.py
   py/kivy_gui_garden_cefpy.py
+  py/wp_gui.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
